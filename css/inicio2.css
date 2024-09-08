@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+#body {
+    background-color: #D9C8B4;
+    margin: 0;
+    display:grid;
+    flex-direction: column;
+    grid-template-areas: 
+        "topnav"
+        "header"
+        "main";
+        grid-template-rows: auto auto 1fr; /* Ajusta o tamanho das linhas */
+        grid-template-columns: 1fr; /* Uma coluna que ocupa toda a largura */     
+        font-family: 'Times New Roman', Times, serif ;
+}
+
+#body p{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#body h1:hover{
+    text-shadow: 2px 2px 2px bisque;
+}
+
+#top
+{
+    position: sticky;
+    top: 0px;
+}
+
+
+.topnav {
+    grid-area: topnav;
+    background-color: #76b5c5;
+    /* background-color: rgb(118, 181, 197, 0.5); */
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.topnav #h2{
+    font-family: 'lobster';
+    color: white;
+    flex: 50%;
+    font-size: 130%;
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+    text-align: left;
+    background: none;
+    border: none;
+    border-radius: none;
+    text-decoration: none;
+    margin-left: 10%;
+    
+}
+
+.topnav h2:hover
+{
+    text-shadow: 2px 2px 2px bisque;
+    
+}
+
+.topnav .a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 2.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 10%;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 2px;
+    height: 50%;
+}
+
+.topnav .a:hover {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    color: white;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.topnav a#active {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    background-color: white;
+    color: #76b5c5;
+    border-radius: 5px;
+    
+}
+
+.tradutor{
+    flex: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tradutor img{
+    /* position: fixed;
+    bottom: 10px;
+    right: 10px; */
+    /* background-color: rgba(254, 249, 249, 0.5); */
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 10px;
+    height: 5vh;
+    width: 5vh;   
+}
+
+.tradutor img:hover
+{
+    transform: scale(1.5);
+}
+
+header{
+    grid-area: header;
+    
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+        "glossario";
+}
+
+.mauso {
+    grid-area: mauso;
+    background-image: url(../img/qb1zq9de.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha itens no centro verticalmente */
+    color: white;
+    height: 100%; 
+}
+
+.mauso h1 {
+    grid-area: h1;
+    font-size: 400%;
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif ;
+}
+
+
+.mauso .p{
+    display: flex;
+}
+
+.mauso p {
+    grid-area: p;
+    background-color: #D9C091;
+    padding: 16px;
+    margin: 5% 10%  ;
+    border-radius: 5px;
+    font-size: 3vh;
+    text-align: justify;
+}
+
+.glossario {
+    grid-area: glossario;
+}
+
+.glossario h1 {
+    grid-area: gh1;
+    font-size: 400%;
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+    text-align: center;
+    color: white; 
+    font-family: 'Times New Roman', Times, serif ;
+    padding: 20px;
+}
+
+h1:hover{
+    text-shadow: 2px 2px 2px bisque;
+}
+
+.a20{
+    color:#76b5c5;
+    margin: 2vh;
+}
+
+/* Aqui é a minha div usada para deixar os meus termos do glossario do 1ºa
+nela na parte do display:grid; ta falando que em cada linha vai ter 5 colunas
+ */
+
+.termos{
+    grid-area: termo;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+    gap: 5vh;
+    margin-right: 7vh;
+    margin-left: 5vh;
+
+}
+
+
+
+
+
+.termos .div {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5%;
+    text-align:left;
+    background-color: #D9C091;
+    margin-bottom: 20px;
+}
+
+
+.termos .img2{
+    width: 80%;
+    height: 30vh;
+    object-fit: cover;
+    border-radius:10%;
+    box-shadow: 0px 0px 10px 3px  bisque;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.termos .img3 {
+    width: 20vh;
+    height: 20vh;
+    object-fit: cover;
+    border-radius:30%;
+    box-shadow: 0px 0px 10px 3px  bisque;
+    padding: 2px;
+}
+
+div {
+    text-align: center;
+    color: white;
+}
+
+
+
+.termos img {
+    width: 20vh;
+    height: 20vh;
+    object-fit: cover;
+    border-radius:60%;
+    box-shadow: 0px 0px 10px 3px  bisque;
+    padding: 2px;
+}
+
+.termos img:hover{
+    transform: scale(1.1);
+}
+
+
+
+details {
+    width: 100%; /* Ajuste conforme necessário */
+    flex: 100%;
+}
+
+.summ{
+    font-family: 'lobster';
+    
+    text-shadow: 2px 2px 2px black;
+}
+
+details summary {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px; /* Adiciona um pequeno padding para espaçamento */
+}
+
+details summary::after {
+    content: '\25BC'; /* Seta para baixo */
+    align-content: center;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+    margin-left: auto; /* Adiciona espaço entre o texto e a seta */
+}
+
+details[open] summary::after {
+    text-shadow: 2px 2px 2px  bisque;
+    content: '\25B2'; /* Seta para cima */
+    transform: rotate(180deg);
+}
+
+details:hover summary{
+    text-shadow: 2px 2px 2px  bisque;
+    
+}
+
+.div:hover {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    top: -40px;
+    
+}
+
+.div:hover{
+    box-shadow: 0px 0px 10px 3px bisque;
+}
+
+details[open] summary{
+    text-shadow: 2px 2px 2px  bisque;
+}
+
+
+/* #mostrar{
+    display: none;
+}
+
+.tradutor:hover #mostrar{
+    width: 5%;
+    display: block;
+    position: absolute;
+    right: 50px;
+    padding:0.7px;
+    background-color: rgba(129, 129, 129, 0.8);
+    border-radius: 10px;
+    font-size: 50%;
+    color: #76b5c5;
+    transform: scale(1.1);
+    } */
+
+
+/* Realidade aumentada */
+.Qrcode {
+    display: grid;
+    grid-template-areas: 
+        "h1"
+        "img";
+    text-align: center;
+    padding: 2vh;
+}
+
+.Qrcode h1 { 
+    grid-area: h1; 
+    font-size: 6vh; 
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+    color: white;
+    font-family: 'Lobster', 'Roboto';
+}
+
+.Qrcode iframe {
+    width: 80%;
+    height: 80vh;
+    grid-area: img;
+    margin-bottom: 0;
+    border: 1vh groove bisque;  
+}
+
+.Qrcode .img {
+    grid-area: img;
+}
+
+.Qrcode img {
+    margin-bottom: 0;
+    border: 1vh groove bisque;  
+}
+
+.Qrcode details {
+    padding: 1vh;
+    font-size: 3vh;  
+}
+
+.Qrcode details summary {
+    display: block;
+    align-content: center;
+    cursor: pointer;
+    padding: 1vh; 
+}
+
+
+
+
+.Qrcode details summary::after {
+    content: '\25BC'; /* Seta para baixo */
+    align-content: center;
+    font-size: 1.6vh;  
+    transition: transform 0.3s ease;
+    margin-left: 0; 
+}
+
+.Qrcode details[open] summary::after {
+    content: '\25B2'; /* Seta para cima */
+    transform: rotate(180deg);
+}
+
+.Qrcode a {
+    grid-area: link;
+    color: white;
+    width: 50%;
+}
+/* 
+#link p{
+    font-size: 25px;
+} */
+
+
+
+
+/* Manual */
+
+
+.manual{
+    display: flex;
+    flex-flow: column;
+    margin: 10vh;
+    padding: 10vh;
+    background-color: white;
+    color: black;
+    text-align: justify;
+}
+
+.manual h2, .manual h3{
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+
+#baixar{
+    display: flex;
+    position: relative;
+    left: 85%;
+    color: black;
+    height: 15vh;
+    
+}
+
+#baixar a{
+    text-decoration: none;
+    color: black;
+    font-size: 3vh;
+}
+
+#baixar h2{
+    font-size: 4vh;
+}
+
+#baixar img{
+    height: 10vh;
+}
+
+
+#baixar p{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Aqui começa a responsatividade, meio que em cada tamanho de tela eu 
+diminui a quantidade colunas em cada linha */
+@media (max-width: 1200px) {
+    .termos {
+        grid-template-columns: repeat(4, 1fr); /* Reduz para 4 colunas em telas menores */
+    }
+}
+
+@media (max-width: 900px) {
+    .termos {
+        grid-template-columns: repeat(3, 1fr); /* Reduz para 3 colunas em telas ainda menores */
+    }
+}
+
+@media (max-width: 600px) {
+    .termos {
+        grid-template-columns: repeat(2, 1fr); /* Reduz para 2 colunas em telas pequenas */
+    }
+
+    .Qrcode {
+        grid-template-areas:
+            "h1"
+            "img";
+    }
+
+    .Qrcode h1 {
+        font-size: 5vh;
+    }
+
+    .Qrcode iframe {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .Qrcode details {
+        font-size: 1.6vh; 
+    }
+
+    .Qrcode a {
+        width: 100%;
+    }
+
+
+}
+
+@media (max-width: 400px) {
+    .termos {
+        grid-template-columns: 1fr; /* Reduz para 1 coluna em telas muito pequenas */
+    }
+
+    
+    
+}
