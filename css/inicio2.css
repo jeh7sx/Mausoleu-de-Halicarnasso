@@ -30,6 +30,10 @@
     top: 0px;
 }
 
+#red{
+    color:red;
+}
+
 
 .topnav {
     grid-area: topnav;
