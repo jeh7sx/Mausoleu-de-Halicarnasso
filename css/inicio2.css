@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+*{
+    box-sizing: border-box;
+}
 
 #body {
     background-color: #D9C8B4;
@@ -10,7 +13,8 @@
     grid-template-areas: 
         "topnav"
         "header"
-        "main";
+        "main"
+        "footer";
         grid-template-rows: auto auto 1fr; /* Ajusta o tamanho das linhas */
         grid-template-columns: 1fr; /* Uma coluna que ocupa toda a largura */     
         font-family: 'Times New Roman', Times, serif ;
@@ -46,6 +50,10 @@
     align-items: center;
     
 }
+
+
+
+
 
 .topnav #h2{
     font-family: 'lobster';
@@ -419,6 +427,7 @@ details[open] summary{
 /* Manual */
 
 
+
 .manual{
     display: flex;
     flex-flow: column;
@@ -437,8 +446,10 @@ details[open] summary{
 
 #baixar{
     display: flex;
+    flex-wrap: wrap;
     position: relative;
-    left: 85%;
+    flex: 95%;
+    justify-content: end;
     color: black;
     height: 15vh;
     
@@ -466,6 +477,158 @@ details[open] summary{
 
 
 
+footer{
+    background-color: #76b5c5;
+    padding: 50px 0;
+    grid-area: footer;
+    border-top: 3px groove #D9C8B4;
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+    font-size: 2vh;
+}
+
+footer #media-none{
+    display: none;
+    margin-top: 10px;
+    
+}
+
+#fa:hover #media-none{
+    display: inline-flex;
+}
+
+#Etec p{
+    display: none;
+}
+
+#Etec:hover p{
+    display: flex;
+    font-size: 2vh;
+    color: black;
+}
+
+
+.container-footer{
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+}
+.row-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 5vh;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-col .a{
+    color:black;
+    text-decoration: none;
+}
+
+.footer-col b:hover{
+    text-decoration: underline red
+}
+
+.footer-col .a:hover{
+    text-decoration: underline;
+}
+
+
+.footer-col h6{
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+    font-family: lobster;
+}
+.footer-col ul{
+    list-style: none;
+}
+.footer-col ul li{
+    margin: 10px 0;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #cecdcd;
+    padding-left: 10px;
+}
+.footer-col .medias-socias{
+    margin-top: 30px;
+}
+.footer-col .medias-socias a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+}
+.footer-col .medias-socias a i{
+    font-size: 20px;
+}
+
+
+/* youtube */
+
+.footer-col .medias-socias .yt:hover{
+    color: red;
+}
+
+/* Whats */
+
+.footer-col .medias-socias .whats:hover{
+    color: greenyellow;
+}
+
+/* Insta */
+
+.footer-col .medias-socias .insta:hover{
+    color: orangered;
+}
+
+/* Github */
+
+.footer-col .medias-socias .git:hover{
+    color: purple;
+}
+
+
+
+.footer-col .medias-socias a:hover{
+    color: #76b5c5;
+    background-color: white;
+}
+
+
+
+
+
+
 /* Aqui começa a responsatividade, meio que em cada tamanho de tela eu 
 diminui a quantidade colunas em cada linha */
 @media (max-width: 1200px) {
@@ -477,6 +640,13 @@ diminui a quantidade colunas em cada linha */
 @media (max-width: 900px) {
     .termos {
         grid-template-columns: repeat(3, 1fr); /* Reduz para 3 colunas em telas ainda menores */
+    }
+}
+
+@media (max-width: 800px) {
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
     }
 }
 
@@ -508,14 +678,24 @@ diminui a quantidade colunas em cada linha */
         width: 100%;
     }
 
+    #footer{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-col{
+        width: 100%;
+    }
+
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .termos {
         grid-template-columns: 1fr; /* Reduz para 1 coluna em telas muito pequenas */
     }
 
-    
+    #footer{
+        grid-template-columns: 1fr;
+    }
     
 }
