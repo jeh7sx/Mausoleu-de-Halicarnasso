@@ -45,6 +45,7 @@
     display: flex;
     align-items: center;
     
+    z-index: 2;
 }
 
 
@@ -179,6 +180,8 @@ main {
 
 .glossario {
     grid-area: glossario;
+    
+    z-index: 1;
 }
 
 .glossario h1 {
@@ -208,7 +211,6 @@ h1:hover{
     flex-wrap: wrap;
     justify-content: center;
     gap: 5vh;
-
 }
 
 
@@ -234,8 +236,8 @@ div {
 
 
 .termos img {
-    width: 12rem;
-    height: 20vh;
+    width: 30vh;
+    height: 30vh;
     object-fit: cover;
     border-radius:60%;
     box-shadow: 0px 0px 10px 3px  bisque;
@@ -294,7 +296,7 @@ details:hover summary{
 }
 
 .div:hover{
-    box-shadow: 0px 0px 10px 3px bisque;
+    box-shadow: 0px 0px 10px 3px rgb(255, 228, 196, 0.5);
 }
 
 details[open] summary{
@@ -674,3 +676,4 @@ diminui a quantidade colunas em cada linha */
     }
     
 }
+
